@@ -1,0 +1,140 @@
+:root {
+  --bg: #1a1a1a;
+  --primary: #00ff9f;
+  --text-light: #aaa;
+  --text-normal: #fff;
+  --font: 'Segoe UI', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #111;
+  font-family: var(--font);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  width: 185px;
+  background-color: var(--bg);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  font-size: 12px;
+  color: var(--text-normal);
+}
+
+.header {
+  text-align: center;
+  padding: 35px 10px 0;
+}
+
+.username {
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--primary);
+  text-shadow: 0 0 6px var(--primary);
+  margin-bottom: 4px;
+
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+.stars i {
+  color: var(--primary);
+  text-shadow: 0 0 4px var(--primary);
+  font-size: 11px;
+  margin: 0 1px;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 12px auto 10px;
+  background-color: #222;
+  background-image: url('https://media.discordapp.net/attachments/957006330776920216/1044670945782136932/balenciaaga_24.gif?ex=68978a22&is=689638a2&hm=d6de5189003c839a8c38d615918b198b4190e79e82a6efd828e245f3f6b33c2d&=');
+  background-size: cover;
+  background-position: center;
+}
+
+.metrics {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  color: var(--text-light);
+}
+
+.metrics div {
+  text-align: center;
+}
+
+.metrics div strong {
+  display: block;
+  color: var(--text-normal);
+  font-size: 13px;
+}
+
+.rank {
+  display: flex;
+  justify-content: center;
+  background-color: #1a1a1a00;
+  color: var(--primary);
+  text-shadow: 0 0 6px var(--primary);
+  padding: 5px 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 11px;
+
+  animation: glowPulse 2.5s ease-in-out infinite;
+}
+
+.info {
+  padding: 0 12px 12px;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px 0;
+  color: var(--text-light);
+}
+
+.info-item i {
+  margin-right: 6px;
+  color: #888;
+  width: 14px;
+}
+
+.info-label {
+  display: flex;
+  align-items: center;
+}
+
+.info-value {
+  color: var(--text-normal);
+  font-weight: 500;
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    text-shadow:
+      0 0 1px var(--primary),
+      0 0 3px var(--primary),
+      0 0 5px var(--primary);
+  }
+  50% {
+    text-shadow:
+      0 0 7px var(--primary),
+      0 0 0px var(--primary),
+      0 0 2px var(--primary);
+  }
+}
