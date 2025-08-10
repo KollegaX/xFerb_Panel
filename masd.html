@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Clean Forum Profile Card</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+  :root {
+    --bg: #1a1a1a;
+    --primary: #ff00f2;
+    --text-light: #aaa;
+    --text-normal: #fff;
+    --font: 'Segoe UI', sans-serif;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #f5f5f5;
+    font-family: var(--font);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .card {
+    width: 185px;
+    background-color: var(--bg);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    font-size: 12px;
+    color: var(--text-normal);
+  }
+
+  .header {
+    text-align: center;
+    padding: 35px 10px 0;
+  }
+
+  .username {
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--primary);
+    text-shadow: 0 0 6px var(--primary);
+    margin-bottom: 4px;
+
+    animation: glowPulse 2s ease-in-out infinite;
+  }
+
+  .stars i {
+    color: var(--primary);
+    text-shadow: 0 0 4px var(--primary);
+    font-size: 11px;
+    margin: 0 1px;
+  }
+
+  .avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 12px auto 10px;
+    background-color: #222;
+    background-image: url('https://media.discordapp.net/attachments/862726697651404800/862726943031820298/balenciaaga_21.gif?ex=68996cd3&is=68981b53&hm=c83493092c7d153fd7be93058b4d18694414102a269bfdabc77c92ede74ffb5c&=');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .metrics {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    color: var(--text-light);
+  }
+
+  .metrics div {
+    text-align: center;
+  }
+
+  .metrics div strong {
+    display: block;
+    color: var(--text-normal);
+    font-size: 13px;
+  }
+
+  .rank {
+    display: flex;
+    justify-content: center;
+    background-color: #1a1a1a00;
+    color: var(--primary);
+    text-shadow: 0 0 6px var(--primary);
+    padding: 5px 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 11px;
+
+
+    animation: glowPulse 2.5s ease-in-out infinite;
+  }
+
+
+  .info {
+    padding: 0 12px 12px;
+  }
+
+  .info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4px 0;
+    color: var(--text-light);
+  }
+
+  .info-item i {
+    margin-right: 6px;
+    color: #888;
+    width: 14px;
+  }
+
+  .info-label {
+    display: flex;
+    align-items: center;
+  }
+
+  .info-value {
+    color: var(--text-normal);
+    font-weight: 500;
+  }
+
+  @keyframes glowPulse {
+    0%, 100% {
+      text-shadow:
+        0 0 1px var(--primary),
+        0 0 3px var(--primary),
+        0 0 5px var(--primary);
+    }
+    50% {
+      text-shadow:
+        0 0 7px var(--primary),
+        0 0 0px var(--primary),
+        0 0 2px var(--primary);
+    }
+  }
+</style>
+
+</head>
+<body>
+
+<div class="card">
+  <div class="header">
+    <div class="username">Zane</div>
+    <div class="stars">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+    </div>
+  </div>
+
+  <div class="avatar"></div>
+
+  <div class="metrics">
+    <div>
+      <strong>7777</strong>
+      <small>REP</small>
+    </div>
+    <div>
+      <strong>-7</strong>
+      <small>LIKES</small>
+    </div>
+  </div>
+
+  <div class="rank">ELITE RANK</div>
+
+  <div class="info">
+    <div class="info-item">
+      <div class="info-label"><i class="fas fa-file-alt"></i>Posts:</div>
+      <div class="info-value">69</div>
+    </div>
+    <div class="info-item">
+      <div class="info-label"><i class="fas fa-comments"></i>Threads:</div>
+      <div class="info-value">69</div>
+    </div>
+    <div class="info-item">
+      <div class="info-label"><i class="fas fa-calendar-alt"></i>Joined:</div>
+      <div class="info-value">Sep 2012</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
